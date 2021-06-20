@@ -98,5 +98,5 @@ resource "aws_db_instance" "rds" {
   # The security group rules must be deleted after the instance is destroyed, otherwise there
   # might be database resources (e.g. mysql or postgresql databases) that won't be able to be
   # deleted by Terraform because the client doesn't have access.
-  depends_on = [aws_security_group_rule.rds_sg_in, aws_security_group_rule.rds_cidr_in]
+  depends_on = [aws_security_group_rule.rds_cidr_in]
 }

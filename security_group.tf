@@ -10,10 +10,10 @@ resource "aws_security_group" "sg_rds" {
     Project     = var.project
   }
 
-  lifecycle {
-    create_before_destroy = true
-    ignore_changes        = [name]
-  }
+  # lifecycle {
+  #   create_before_destroy = true
+  #   ignore_changes        = [name]
+  # }
 }
 
 # resource "aws_security_group_rule" "rds_sg_in" {
